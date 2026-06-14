@@ -5,18 +5,24 @@ import { useEffect } from 'react'
 
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const [total, setTotal] = useState(0);
+  // const [count, setCount] = useState(0);
+  // const [total, setTotal] = useState(0);
+
+
+  // function handleClick() {
+  //   setCount(count+1);
+  // }
+
+  // function handleClickTotal() {
+  //   setTotal(total+1);
+  // }
+
+
+
+
   // first-> side Effect function
   // second-> clean-up function
   // third-> comma seperated dependency list
-  function handleClick() {
-    setCount(count+1);
-  }
-
-  function handleClickTotal() {
-    setTotal(total+1);
-  }
 
   // variation1: 
 
@@ -50,6 +56,20 @@ const App = () => {
   // }, [count,total])
 
 
+
+  // variation5:
+  // iss baar let's add a cleanup function
+
+  // useEffect(() => {
+  //   alert("count is updated")
+  
+  //   return () => {
+  //     alert("count is unmounted from UI")
+  //   }
+  // }, [count])
+  
+
+
   
 
 
@@ -62,7 +82,7 @@ const App = () => {
       <button onClick={handleClickTotal}>Update Total</button>
       <p>Total is {total} </p>
     </div>
-  )
+   )
 }
 
 export default App
